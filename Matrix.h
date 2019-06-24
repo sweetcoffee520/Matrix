@@ -3,7 +3,7 @@
 class Matrix
 {
 public:
-	Matrix()   //构建一个空矩阵
+	Matrix();   //构建一个空矩阵
 	Matrix(int m, int n);			 //构建一个m*n的全零矩阵
 	Matrix(int n);				 //构建一个n*n的单位矩阵
 	Matrix(const Matrix &);		 //拷贝构造函数，深拷贝
