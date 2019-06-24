@@ -3,6 +3,7 @@
 class Matrix
 {
 public:
+	Matrix()   //构建一个空矩阵
 	Matrix(int m, int n);			 //构建一个m*n的全零矩阵
 	Matrix(int n);				 //构建一个n*n的单位矩阵
 	Matrix(const Matrix &);		 //拷贝构造函数，深拷贝
@@ -29,7 +30,7 @@ public:
 	double operator /(const double f);      //当矩阵为一行一列时除以常数
 	Matrix& operator=(const Matrix &m);
 	Matrix operator -();                    //对矩阵取负
-	Matrix Inverse();
+	Matrix Inverse();                    //矩阵求逆
 	friend std::ostream& operator <<(std::ostream &os, const Matrix &m);//简单重载<<
     Matrix operator *(const double f);         //矩阵乘以常数，常数在后
 	friend Matrix operator *(const double f,const Matrix &m);    //矩阵乘以常数，常数在前
