@@ -231,6 +231,19 @@ Matrix Matrix::operator *(const Matrix &m)
 	}
 	return _copy;
 }
+Matrix Matrix::dot(Matrix &m,Matrix &n)
+{
+	Matrix _copy(m.rowNum,m.colNum);
+	if(m.colNum!=n.colNum||m.rowNum!=n.rowNum){cout <<"矩阵大小不相等"; return _copy;}
+	for(int i=0;i<m.rowNum;i++)
+	{
+		for(int j=0;j<m.colNum;j++)
+		{
+			_copy.set(i,j,m.get(i,j)+n.get(i,j));
+		}
+	}
+	return _copy;
+}
 double Matrix::operator /(const double f)
 {
 	double _copy=0;

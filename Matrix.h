@@ -13,6 +13,7 @@ public:
 
 	int getRowNum() const;				//返回矩阵的行数
 	int getColNum() const;				//返回矩阵的列数
+	static Matrix dot(Matrix &m,Matrix &n);    //矩阵点乘
 
 	Matrix Trans() const;				//将矩阵转置
 	//矩阵初等行变换
